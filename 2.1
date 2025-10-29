@@ -1,0 +1,21 @@
+def count_non_repeated_digits(N):
+    # Convert number to string to access each digit
+    digits = str(N)
+    
+    # Dictionary to count occurrences of each digit
+    count = {}
+    
+    for d in digits:
+        count[d] = count.get(d, 0) + 1
+    
+    # Count digits that occur exactly once
+    non_repeated_count = sum(1 for v in count.values() if v == 1)
+    
+    return non_repeated_count
+
+
+# Example usage:
+print(count_non_repeated_digits(292))   # Output: 1
+print(count_non_repeated_digits(1015))  # Output: 2
+print(count_non_repeated_digits(108))   # Output: 3
+print(count_non_repeated_digits(22))    # Output: 0
