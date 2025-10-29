@@ -1,0 +1,12 @@
+# Read the three sides from the user
+a = int(input())
+b = int(input())
+c = int(input())
+
+# Check the type of triangle
+if a == b == c:
+    print("That's a equilateral triangle")
+elif a == b or b == c or a == c:
+    print("That's a isosceles triangle")
+else:
+    print("That's a scalene triangle")
